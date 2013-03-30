@@ -16,6 +16,9 @@
 #include <Standard_Macro.hxx>
 #endif
 
+#ifndef _TopoDS_Solid_HeaderFile
+#include <TopoDS_Solid.hxx>
+#endif
 #ifndef _BOP_ShellSolid_HeaderFile
 #include <BOP_ShellSolid.hxx>
 #endif
@@ -75,8 +78,12 @@ Standard_EXPORT virtual ~BOP_SolidSolid(){Destroy();}
 
 protected:
 
+  
+  Standard_EXPORT     void PrepareReferences() ;
 
 
+TopoDS_Solid myRefObject;
+TopoDS_Solid myRefTool;
 
 
 private:

@@ -40,14 +40,17 @@
 #ifndef _IntPolyh_ArrayOfCouples_HeaderFile
 #include <IntPolyh_ArrayOfCouples.hxx>
 #endif
+#ifndef _IntPolyh_ArrayOfStartPoints_HeaderFile
+#include <IntPolyh_ArrayOfStartPoints.hxx>
+#endif
+#ifndef _Standard_Boolean_HeaderFile
+#include <Standard_Boolean.hxx>
+#endif
 #ifndef _IntPolyh_ArrayOfSectionLines_HeaderFile
 #include <IntPolyh_ArrayOfSectionLines.hxx>
 #endif
 #ifndef _IntPolyh_ArrayOfTangentZones_HeaderFile
 #include <IntPolyh_ArrayOfTangentZones.hxx>
-#endif
-#ifndef _Standard_Boolean_HeaderFile
-#include <Standard_Boolean.hxx>
 #endif
 class Adaptor3d_HSurface;
 class TColStd_Array1OfReal;
