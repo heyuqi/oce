@@ -407,7 +407,9 @@ void StdPrs_ShadedShape::Add (const Handle (Prs3d_Presentation)& thePresentation
   // of shape triangulation
   if (!BRepTools::Triangulation (theShape, aDeflection))
   {
+#ifndef OCE_DISABLE_CLEAN_SHAPE_TRIANGLES
     BRepTools::Clean (theShape);
+#endif
 
     // retrieve meshing tool from Factory
     Handle(BRepMesh_DiscretRoot) aMeshAlgo = BRepMesh_DiscretFactory::Get().Discret (theShape,
