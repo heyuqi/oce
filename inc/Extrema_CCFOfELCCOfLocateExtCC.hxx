@@ -113,6 +113,8 @@ Standard_Real myU;
 Standard_Real myV;
 gp_Pnt myP1;
 gp_Pnt myP2;
+gp_Vec myDu;
+gp_Vec myDv;
 TColStd_SequenceOfReal mySqDist;
 Extrema_SeqPOnCOfCCFOfELCCOfLocateExtCC myPoints;
 
