@@ -98,6 +98,8 @@ protected:
   //! write  theMessage  to  the  MessageDriver  of  the <br>
 //!          Application <br>
   Standard_EXPORT     void WriteMessage(const TCollection_ExtendedString& theMessage) ;
+  //! Write info secton using FSD_BinaryFile driver <br>
+  Standard_EXPORT   virtual  void WriteInfoSection(const Handle(CDM_Document)& theDocument,const TCollection_AsciiString& theFile) ;
 
 Handle_BinMDF_ADriverTable myDrivers;
 BinObjMgt_SRelocationTable myRelocTable;
@@ -110,8 +112,6 @@ private:
   //! Returns true if <L> and its sub-labels do not contain <br>
 //!          attributes to store <br>
   Standard_EXPORT     Standard_Boolean FirstPassSubTree(const TDF_Label& L,TDF_LabelList& ListOfEmptyL) ;
-  //! Write info secton using FSD_BinaryFile driver <br>
-  Standard_EXPORT     void WriteInfoSection(const Handle(CDM_Document)& theDocument,const TCollection_AsciiString& theFile) ;
   
   Standard_EXPORT     void UnsupportedAttrMsg(const Handle(Standard_Type)& theType) ;
 

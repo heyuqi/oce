@@ -103,7 +103,7 @@ protected:
   //! Read the  info  section  of  theFile into theData, <br>
 //!          return a file  position  corresponding to the info <br>
 //!          section end <br>
-  Standard_EXPORT     Storage_Position ReadInfoSection(const TCollection_AsciiString& theFile,Handle(Storage_HeaderData)& theData) ;
+  Standard_EXPORT   virtual  Storage_Position ReadInfoSection(const TCollection_AsciiString& theFile,Handle(Storage_HeaderData)& theData) ;
   //! define the procedure of reading a section to file. <br>
   Standard_EXPORT   virtual  void ReadSection(BinLDrivers_DocumentSection& theSection,const Handle(CDM_Document)& theDoc,Standard_IStream& theIS) ;
   
