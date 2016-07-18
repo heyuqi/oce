@@ -1125,6 +1125,10 @@ GeomAbs_Shape  BRep_Tool::Continuity(const TopoDS_Edge& E,
 gp_Pnt  BRep_Tool::Pnt(const TopoDS_Vertex& V)
 {
   Handle(BRep_TVertex)& TV = *((Handle(BRep_TVertex)*) &V.TShape());
+  if (TV.IsNull ()) {
+    Standard_NullObject::Raise ();
+  }
+
   gp_Pnt P = TV->Pnt();
   P.Transform(V.Location().Transformation());
   return P;

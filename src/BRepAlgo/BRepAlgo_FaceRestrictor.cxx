@@ -39,6 +39,7 @@
 #include <gp_Pnt2d.hxx>
 
 #include <Precision.hxx>
+#include <Standard_NullObject.hxx>
 
 //=======================================================================
 //function : BRepAlgo_FaceRestrictor
@@ -284,6 +285,10 @@ static Standard_Boolean IsInside(const TopoDS_Wire&       wir,
       else {
 	prm = f+1.;
       }
+    }
+
+    if (C2d.IsNull ()) {
+      Standard_NullObject::Raise ();
     }
 
     gp_Pnt2d pt2d(C2d->Value(prm));
